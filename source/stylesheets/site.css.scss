@@ -1,6 +1,132 @@
 @charset "utf-8";
 @import "normalize";
+@import "skeleton";
+
+/* Formatting */
+ul {
+  list-style-type: none;
+
+  li {
+    margin-bottom: 0;
+  }
+}
 
 .text-center {
   text-align: center;
+}
+
+
+/* Typography */
+$sans: "Clear Sans", sans-serif;
+
+body, h1, h2, h3, h4, h5, h6 { 
+  font-family: $sans;
+}
+
+li {
+  font-weight: 10
+}
+
+
+/* Header */
+$gradient-color1: #7F40FF;
+$gradient-color2: #FF40CF;
+
+.header {
+  background: $gradient-color1;
+  background: -webkit-linear-gradient(left top, $gradient-color1 , $gradient-color2);
+  background: -o-linear-gradient(bottom right, $gradient-color1, $gradient-color2);
+  background: -moz-linear-gradient(bottomright, $gradient-color1, $gradient-color2);
+  background: linear-gradient(to bottom right, $gradient-color1 , $gradient-color2);
+  padding-bottom: 25px;
+  padding-top: 40px;
+
+  h1 {
+    margin-bottom: 0.1rem;
+    font-weight: 700;
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h6 {
+    margin-bottom: 0.6rem;
+    color: #fff;
+  }
+ 
+  ul {
+    text-align: center;
+    cursor: default;
+    
+    li {
+      display: inline;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 14px;
+    }
+  }
+}
+
+
+/* Footer */
+$light-gray: #b0bfc7;
+$dark-gray: #678494;
+
+.footer {
+  border-top: 1px solid $light-gray;
+  color: $light-gray;
+  margin-top: 30px;
+
+  .info {
+    ul {
+      margin-top: 10px;
+
+      li {
+        a {
+          color: $light-gray;
+          text-decoration: none;
+
+          &:hover {
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
+  .icons {
+    font-size: 30px;
+    text-align: right;
+
+    ul {
+      cursor: default;
+
+      li {
+        display: inline;
+        
+        a {
+          color: $light-gray;
+
+          &:hover {
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
 }
