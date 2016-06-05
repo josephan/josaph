@@ -18,13 +18,14 @@ ul {
 
 /* Typography */
 $sans: "Clear Sans", sans-serif;
+$serif: "Linux Libertine", Times, serif;
 
 body, h1, h2, h3, h4, h5, h6 { 
   font-family: $sans;
 }
 
-li {
-  font-weight: 10
+p {
+  font-family: $serif;
 }
 
 
@@ -40,6 +41,7 @@ $gradient-color2: #FF40CF;
   background: linear-gradient(to bottom right, $gradient-color1 , $gradient-color2);
   padding-bottom: 25px;
   padding-top: 40px;
+  margin-bottom: 40px;
 
   h1 {
     margin-bottom: 0.1rem;
@@ -70,10 +72,6 @@ $gradient-color2: #FF40CF;
       a {
         color: #fff;
         text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
 
@@ -95,9 +93,12 @@ $dark-gray: #678494;
 
   .info {
     ul {
-      margin-top: 10px;
+      margin-top: 8px;
 
       li {
+        margin-bottom: -5px;
+        font-size: 14px;
+
         a {
           color: $light-gray;
           text-decoration: none;
@@ -110,7 +111,7 @@ $dark-gray: #678494;
     }
   }
   .icons {
-    font-size: 30px;
+    font-size: 28px;
     text-align: right;
 
     ul {
@@ -125,8 +126,40 @@ $dark-gray: #678494;
           &:hover {
             color: $dark-gray;
           }
+
+          i {
+            margin-right: 0;
+          }
         }
       }
     }
   }
+}
+
+/* Miscellaneous */
+.btn {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 1px 8px;
+  padding-bottom: 3px;
+}
+
+.project-card {
+  height: 200px;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.6);
+}
+
+.project-description {
+  color: $dark-gray;
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.project-header {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: $dark-gray;
 }
