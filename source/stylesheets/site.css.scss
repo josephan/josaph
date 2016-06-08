@@ -189,6 +189,12 @@ $dark-gray: #678494;
   color: $dark-gray;
 }
 
+.about-header {
+  line-height: 30px;
+  font-family: $serif;
+  font-size: 36px;
+}
+
 .about-subheader {
   line-height: 30px;
   font-family: $serif;
@@ -202,4 +208,25 @@ $dark-gray: #678494;
 .mini-container {
   margin: 0 auto;
   max-width: 600px;
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 10px;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.profile-picture {
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  max-width: 200px;
+  margin: 0 20px 10px 0;
+  @include media-query(600px) {
+    max-width: 160px;
+  }
 }
