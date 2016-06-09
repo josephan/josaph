@@ -15,9 +15,18 @@ ul {
   text-align: center;
 }
 
+.main {
+  padding-top: 40px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 /* Typography */
-$sans: "Clear Sans", sans-serif;
+$sans: "Muli", sans-serif;
 $serif: "Linux Libertine", Times, serif;
 
 body, h1, h2, h3, h4, h5, h6 { 
@@ -25,9 +34,8 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: $serif;
+  font-family: $sans;
 }
-
 
 /* Header */
 $gradient-color1: #7F40FF;
@@ -41,19 +49,14 @@ $gradient-color2: #FF40CF;
   background: linear-gradient(to bottom right, $gradient-color1 , $gradient-color2);
   padding-bottom: 25px;
   padding-top: 40px;
-  margin-bottom: 40px;
 
   h1 {
-    margin-bottom: 0.1rem;
-    font-weight: 700;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
     
     a {
       color: #fff;
       text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -65,12 +68,14 @@ $gradient-color2: #FF40CF;
   ul {
     text-align: center;
     cursor: default;
+    margin-top: 20px;
     
     li {
       display: inline;
 
       a {
-        color: #fff;
+        background-color: #fff;
+        color: $gradient-color2;
         text-decoration: none;
       }
     }
@@ -93,11 +98,11 @@ $dark-gray: #678494;
 
   .info {
     ul {
-      margin-top: 8px;
+      margin-top: 6px;
 
       li {
         margin-bottom: -5px;
-        font-size: 12px;
+        font-size: 13px;
 
         a {
           color: $light-gray;
@@ -164,45 +169,26 @@ $dark-gray: #678494;
 
 .btn {
   border: 1px solid #fff;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 1px 8px;
   padding-bottom: 3px;
 }
 
-.project-card {
-  height: 200px;
-  margin-bottom: 40px;
-  -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.6);
-  -moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.6);
-  box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.6);
-}
-
-.project-description {
-  color: $dark-gray;
-  line-height: 24px;
-  font-size: 20px;
-}
-
-.project-header {
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: $dark-gray;
-}
-
 .about-header {
   line-height: 30px;
-  font-family: $serif;
+  font-family: $sans;
   font-size: 36px;
 }
 
 .about-subheader {
   line-height: 30px;
-  font-family: $serif;
+  font-family: $sans;
   font-size: 24px;
 }
 
 .about-body {
   font-size: 16px;
+  font-family: $sans;
 }
 
 .mini-container {
@@ -229,4 +215,12 @@ $dark-gray: #678494;
   @include media-query(600px) {
     max-width: 160px;
   }
+}
+
+
+/* home page ( resources ) */
+.box {
+  height: 40px;
+  width: 40px;
+  border: 3px solid #000;
 }

@@ -3,12 +3,12 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Joseph An" %></title>
 
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Clear+Sans:400,700/Linux+Libertine:400">
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Muli:200,400,400i,700">
     <%= stylesheet_link_tag :fontello %>
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
@@ -17,9 +17,7 @@
 
   <body>
     <%= partial "layouts/header" %>
-    <div class="container">
-      <%= yield %>
-    <%= partial "layouts/footer" %>
-    </div>
+    <%= yield %>
+    <!-- <%= partial "layouts/footer" %> -->
   </body>
 </html>
