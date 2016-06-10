@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "normalize";
 @import "skeleton";
+@import "grid";
 
 /* Formatting */
 ul {
@@ -16,7 +17,7 @@ ul {
 }
 
 .main {
-  padding-top: 40px;
+  padding: 0.5%;
 }
 
 * {
@@ -220,7 +221,18 @@ $dark-gray: #678494;
 
 /* home page ( resources ) */
 .box {
-  height: 40px;
-  width: 40px;
-  border: 3px solid #000;
+  height: 23.76vw;
+  width: 24%;
+  background-color: white;
+  float: left;
+  margin: 0.5%;
+  border: 2px solid black;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .box {
+    height: 15.503vw;
+    width: 15.66%;
+  }
 }
