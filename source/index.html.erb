@@ -1,26 +1,9 @@
 <div>
-  <div class="box"><img src="https://d13yacurqjgara.cloudfront.net/users/60166/screenshots/2758006/logo_project.jpg" alt=""></div>
-  <div class="box"><img src="https://d13yacurqjgara.cloudfront.net/users/60166/screenshots/2649058/the_wave2.jpg" alt=""></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
+  <% data.resources.each do |r| %>
+    <a href="<%= r.url %>" target="_blank">
+      <div class="box">
+        <p><%= r.name %></p>
+      </div>
+    </a>
+  <% end %>
 </div>
