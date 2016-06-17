@@ -16,10 +16,6 @@ ul {
   text-align: center;
 }
 
-.main {
-  padding: 0.5%;
-}
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -28,7 +24,7 @@ ul {
 
 /* Typography */
 $sans: "Muli", sans-serif;
-$serif: "Linux Libertine", Times, serif;
+$serif: "Libre Bodoni", Times, serif;
 
 body, h1, h2, h3, h4, h5, h6 { 
   font-family: $sans;
@@ -42,7 +38,7 @@ p {
 $gradient-color1: #16222A;
 $gradient-color2: #3A6073;
 
-.header {
+.main-header {
   background: $gradient-color1;
   background: -webkit-linear-gradient(to left, $gradient-color1 , $gradient-color2);
   background: linear-gradient(to left, $gradient-color1 , $gradient-color2);
@@ -192,6 +188,7 @@ $dark-gray: #678494;
 
 .mini-container {
   margin: 0 auto;
+  padding: 16px 20px;
   max-width: 600px;
 
   h1, h2, h3, h4, h5, h6, p {
@@ -223,21 +220,58 @@ $dark-gray: #678494;
   width: 24%;
   background-color: white;
   float: left;
-  margin: 0.5%;
+  margin: 2%;
   border-radius: 2px;
   background-color: #f2f2f2;
-  padding: 0.25% 0.5%;
-  line-height: 19px;
+  padding: 0.75% 1%;
   overflow: hidden;
   color: black;
 
   p {
     margin: 0;
     padding: 0;
+    font-family: $serif;
+  }
+
+  .header {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1em;
+  }
+
+  .subheader {
+    font-size: 12px;
+    line-height: 1.2em;
   }
 
   img {
     width: 100%;
+  }
+}
+
+.gallery {
+  padding: 3%;
+}
+
+.gallery-link {
+  &:hover {
+    .header {
+      text-decoration: underline;
+    }
+  }
+}
+
+// tablets
+@media (min-width: 798px) { 
+  .box {
+    .header {
+      font-size: 30px;
+    }
+
+    .subheader {
+      font-size: 20px;
+    }
   }
 }
 
@@ -246,5 +280,26 @@ $dark-gray: #678494;
   .box {
     height: 15.503vw;
     width: 15.66%;
+
+    .header {
+      font-size: 30px
+    }
+
+    .subheader {
+      font-size: 20px;
+    }
+  }
+}
+
+/* Medium devices (desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .box {
+    .header {
+      font-size: 30px;
+    }
+
+    .subheader {
+      font-size: 20px;
+    }
   }
 }

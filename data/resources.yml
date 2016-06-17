@@ -1,12 +1,12 @@
 -
-  name: Write Code Every Day
-  author: John Resig
+  header: Write Code Every Day
+  subheader: John Resig
   description: 
   url: http://ejohn.org/blog/write-code-every-day/
   class: blog
 -
-  name: Advice & How To
-  author: Andreessen Horowitz
+  header: Advice & How To
+  subheader: Andreessen Horowitz
   description: 
   url: http://a16z.com/advice-and-how-to/
   class: blog

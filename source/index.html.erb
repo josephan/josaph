@@ -1,8 +1,9 @@
-<div>
+<div class="gallery">
   <% data.resources.each do |r| %>
-    <a href="<%= r.url %>" target="_blank">
+    <a href="<%= r.url %>" target="_blank" class="gallery-link">
       <div class="box">
-        <p><%= r.name %></p>
+        <p class="header"><%= r.header %></p>
+        <p class="subheader"><%= r.subheader %></p>
       </div>
     </a>
   <% end %>
